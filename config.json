@@ -1,0 +1,30 @@
+{
+    "log_level": "debug",
+    "server": {
+      "port": 8080,
+      "host": "0.0.0.0"
+    },
+    "plugins": [
+      {
+        "enabled": true,
+        "name": "accuknox-logger",
+        "path": "./accuknox-plugin.so",
+        "config": {
+          "enabled": true,
+          "api_key": "your-accuknox-prompt-firewall-jwt-token-here",
+          "user_info": "your-user-email@example.com"
+        }
+      }
+    ],
+    "providers": {
+      "openai": {
+        "keys": [
+          {
+            "value": "your-openai-api-key-here",
+            "models": ["gpt-3.5-turbo"],
+            "weight": 1.0
+          }
+        ]
+      }
+    }
+  }
